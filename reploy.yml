@@ -16,3 +16,6 @@ services:
       - npm install
     serve:
       - node app.js
+  mongo:
+    image: mongo
+    port: 27017

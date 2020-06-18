@@ -19,3 +19,4 @@ services:
   mongo:
     image: mongo
     port: 27017
+    do-not-expose: true

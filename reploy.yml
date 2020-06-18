@@ -1,10 +1,7 @@
 setup:
   commands:
-    - ls -a
-    - echo "yo whatsup"
     - mkdir -p /docker-entrypoint-initdb.d
     - cp seed.js /docker-entrypoint-initdb.d/
-    - echo "done copying"
 services:
   frontend:
     runtime: reactjs
@@ -27,3 +24,5 @@ services:
     image: mongo
     port: 27017
     do-not-expose: true
+    environment:
+      MONGO_INITDB_DATABASE: test

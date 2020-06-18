@@ -1,0 +1,19 @@
+services:
+  frontend:
+    runtime: reactjs
+    port: 3000
+    path: frontend
+    build:
+      - yarn install
+      - yarn build
+    serve:
+      - npx serve build/ -l 3000
+  backend:
+    runtime: nodejs
+    port: 5000
+    path: backend
+    build:
+      - npm install
+    serve:
+      - node app.js
+

@@ -16,4 +16,3 @@ services:
       - npm install
     serve:
       - node app.js
-

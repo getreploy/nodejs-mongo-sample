@@ -1,6 +1,8 @@
 setup:
   commands:
     - echo "yo whatsup"
+    - cp seed.js /docker-entrypoint-initdb.d/
+    - echo "done copying"
 services:
   frontend:
     runtime: reactjs

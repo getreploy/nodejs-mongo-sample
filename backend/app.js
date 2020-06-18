@@ -1,5 +1,4 @@
 const express = require('express')
-const mongo = require('mongodb');
 const app = express()
 const port = 5000
 

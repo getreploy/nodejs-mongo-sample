@@ -8,7 +8,7 @@ setup:
     - cp seed.js /docker-entrypoint-initdb.d/
 services:
   frontend:
-    runtime: reactjs
+    runtime: node
     port: 3000
     path: frontend
     build:
@@ -17,7 +17,7 @@ services:
     serve:
       - npx serve build/ -l 3000
   backend:
-    runtime: nodejs
+    runtime: node
     port: 5000
     path: backend
     build:

@@ -4,9 +4,12 @@ var MongoClient = require("mongodb").MongoClient;
 const app = express();
 const port = 5000;
 
-MongoClient.connect("mongodb://localhost:27017/test", function (err, db) {
+MongoClient.connect("mongodb://localhost:27017", function (err, client) {
   if (err) throw err;
-  console.log(db);
+  const db = client.db("test");
+  db.listCollections().toArray(function (err, collInfos) {
+    console.log(collInfos);
+  });
 });
 
 app.get("/", (req, res) => res.send("Hello World!"));

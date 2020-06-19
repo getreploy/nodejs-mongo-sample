@@ -9,6 +9,7 @@ MongoClient.connect("mongodb://localhost:27017", function (err, client) {
   const db = client.db("test");
   db.listCollections().toArray(function (err, collInfos) {
     console.log(collInfos);
+    console.log("hi");
   });
 });
 

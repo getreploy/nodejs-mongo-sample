@@ -8,7 +8,6 @@ let res = [
   db.container.insert({ myfield: 'hello', thatfield: 'testing' }),
   db.container.insert({ myfield: 'hello2', thatfield: 'testing' }),
   db.container.insert({ myfield: 'hello3', thatfield: 'testing' }),
-  db.container.insert({ myfield: 'hello3', thatfield: 'testing' }),
 ]
 
 printjson(res)

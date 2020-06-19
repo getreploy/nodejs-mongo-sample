@@ -24,5 +24,3 @@ services:
     image: mongo
     port: 27017
     do-not-expose: true
-    environment:
-      MONGO_INITDB_DATABASE: test

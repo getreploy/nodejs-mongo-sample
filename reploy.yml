@@ -1,3 +1,8 @@
+cache:
+  - file: backend/package-lock.json
+    path: backend/node_modules
+  - file: frontend/yarn.lock
+    path: frontend/node_modules
 setup:
   commands:
     - cp seed.js /docker-entrypoint-initdb.d/

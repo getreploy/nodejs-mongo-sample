@@ -1,17 +1,13 @@
-let error = true
-
-let res = [
-  db.container.drop(),
-  db.container.createIndex({ myfield: 1 }, { unique: true }),
-  db.container.createIndex({ thatfield: 1 }),
-  db.container.insert({ myfield: 'hello', thatfield: 'testing' }),
-  db.container.insert({ myfield: 'hello2', thatfield: 'testing' }),
-  db.container.insert({ myfield: 'hello3', thatfield: 'testing' }),
-]
-
-printjson(res)
-
-if (error) {
-  print('Error, exiting')
-  quit(1)
-}
+db.test.drop();
+db.test.insertMany([
+  {
+    _id: 1,
+    name: 'Tensor',
+    age: 6
+  },
+  {
+    _id: 2,
+    name: 'Flow',
+    age: 10
+  }
+])

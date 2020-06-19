@@ -3,16 +3,17 @@ setup:
     - cp seed.js /docker-entrypoint-initdb.d/
 services:
   frontend:
-    runtime: reactjs
+    runtime: node
     port: 3000
     path: frontend
     build:
       - yarn install
       - yarn build
+      - which react-scripts
     serve:
       - npx serve build/ -l 3000
   backend:
-    runtime: nodejs
+    runtime: node
     port: 5000
     path: backend
     build:
@@ -23,3 +24,4 @@ services:
     image: mongo
     port: 27017
     do-not-expose: true
+

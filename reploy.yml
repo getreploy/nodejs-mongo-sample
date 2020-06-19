@@ -1,6 +1,5 @@
 setup:
   commands:
-    - mkdir -p /docker-entrypoint-initdb.d
     - cp seed.js /docker-entrypoint-initdb.d/
 services:
   frontend:

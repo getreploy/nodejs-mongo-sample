@@ -12,7 +12,7 @@ services:
     port: 3000
     path: frontend
     build:
-      - npm install react-scripts@3.4.1 -g --silent
+      - npm install react-scripts@3.4.1 -g
       - yarn install
       - yarn build
     serve:
